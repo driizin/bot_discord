@@ -3,8 +3,10 @@ from discord.ext import commands
 import json
 import os
 import random
+from dotenv import load_dotenv
 
-TOKEN = os.getenv('DISCORD_TOKEN')
+load_dotenv()
+
 
 # --- Configurações do Bot ---
 intents = discord.Intents.default()
@@ -286,8 +288,5 @@ async def instrucoes(interaction: discord.Interaction):
 # --- Token do Bot ---
 # ATENÇÃO: Substitua "SEU_TOKEN_DO_BOT_AQUI" pelo token real do seu bot.
 # Mantenha seu token em segredo e nunca o compartilhe publicamente!
-if TOKEN is None:
-    print("Erro: A variável de ambiente 'DISCORD_TOKEN' não foi definida no sistema.")
-    print("Por favor, defina a variável 'DISCORD_TOKEN' com o valor do seu token do bot.")
-
-bot.run("TOKEN")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+bot.run(DISCORD_TOKEN)
