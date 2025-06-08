@@ -55,6 +55,7 @@ multidict==6.4.4
 murmurhash==1.0.12
 mysql-connector==2.2.9
 mysql-connector-python==8.0.5
+mysqlclient==2.2.7
 networkx==3.3
 numpy==2.2.5
 packaging==25.0
